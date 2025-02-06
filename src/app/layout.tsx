@@ -55,13 +55,13 @@ export default async function RootLayout({
               >
                 <div className="flex items-center gap-2">
                   <button>Logout</button>
-                  <Image
+                  {/* <Image
                     src={session.user.image || ""}
                     alt={session.user.name || ""}
                     className="rounded-full w-4 h-4 object-cover"
                     width={12}
                     height={12}
-                  />
+                  /> */}
                 </div>
               </form>
             ) : (
