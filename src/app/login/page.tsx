@@ -2,6 +2,7 @@ import CredLogin from "@/components/CredLogin";
 import React from "react";
 import { prisma } from "../../../prisma/prisma";
 import { signIn } from "@/auth/authSetup";
+import OAuthLogin from "@/components/OAuthLogin";
 
 function page() {
   const signup =async ({
@@ -27,7 +28,10 @@ function page() {
       await signIn('credentials', { email: email, password: password, redirectTo: '/my-account' })
   } 
   return (
-   <CredLogin signup={signup}></CredLogin> 
+    <>
+      <CredLogin signup={signup}></CredLogin> 
+      {/* <OAuthLogin></OAuthLogin> */}
+    </>
   );
 }
 
